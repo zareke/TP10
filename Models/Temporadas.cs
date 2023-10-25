@@ -1,7 +1,7 @@
 using Series.Models;
 public class Temporadas{
-    public static int IdTemporada{get;set;}
-    public static int IdSerie{get;set;}
-    public static int NumeroTemporada{get;set;}
-    public static string TituloTemporada{get;set;}
+    public  int IdTemporada{get;set;}
+    public  int IdSerie{get;set;}
+    public  int NumeroTemporada{get;set;}
+    public  string TituloTemporada{get;set;}
 }

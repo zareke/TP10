@@ -14,8 +14,7 @@ foreach(Serie s in ViewBag.Series){
   <img src="@s.ImagenSerie" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">@s.Nombre</h5>
-    <p class="card-text">@s.Sinopsis</p>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="Modal('@i',nombreSerie)">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="ModalSeries('@i',indexCont ,0)">
   Más información
 </button>
 
@@ -33,15 +32,18 @@ i++;
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="nombreSerie">Modal title</h1>
+        <p hidden="true" id="indexCont"></p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        
+      <div class="modal-body" id="cartita">
       </div>
       <div class="modal-footer">
+        
+        <button type="button" class="btn btn-success" onclick="ModalSeries('@i',indexCont ,1)">Información general</button>
+         <button type="button" class="btn btn-info" onclick="ModalActores(indexCont)">Actores</button>
+        <button type="button" class="btn btn-primary" onclick="ModalTemporadas(indexCont)">Temporadas</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Temporadas</button>
-        <button type="button" class="btn btn-info">Actores</button>
+        
       </div>
     </div>
   </div>
